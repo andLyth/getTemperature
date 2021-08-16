@@ -17,7 +17,7 @@ std::string getISOCurrentTimestamp()
     return date::format("%FT%TZ", date::floor<Precision>(now));
 }
 
-std::string readFile(void);
+void readFile(void);
 void timer_start(std::function<void(void)> func);
 
 std::queue<double> temperQueue;
@@ -42,7 +42,7 @@ int main()
 }
 
 
-std::string readFile(void)
+void readFile(void)
 {
     std::string str;
     std::ifstream temperStream("temperature.txt");
