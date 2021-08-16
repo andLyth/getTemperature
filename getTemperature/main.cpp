@@ -5,10 +5,8 @@
 #include <timer_Start.h>
 
 
-
 #define WAIT_PERIOD_FETCH 2000
 #define WAIT_PERIOD_SEND 2000
-
 
 
 void readFile(void);
@@ -18,9 +16,11 @@ void timer_start(std::function<void(void)> func);
 std::queue<double> temperQueue;
 std::string nowTime = getISOCurrentTimestamp<std::chrono::microseconds>();
 
+
+
 int main()
 {
-    /*starting periodic fuction call to read file with ADC values*/
+    /*starting periodic function call to read file with ADC values*/
     timer_start(readFile);
     timer_start(printData);
 
@@ -42,13 +42,25 @@ void readFile(void)
     std::ifstream temperStream("temperature.txt");
     auto wakeUpTime = std::chrono::steady_clock::now() + std::chrono::milliseconds(WAIT_PERIOD_FETCH);
 
-    while (std::getline(temperStream, str))
+    if (temperStream.is_open())
     {
-        temperQueue.push(stod(str));
-    }
-    temperStream.close();
-    std::this_thread::sleep_until(wakeUpTime);
+        while (std::getline(temperStream, str))
+        {
+            temperQueue.push(stod(str));
+        }
 
+        std::this_thread::sleep_until(wakeUpTime);
+                temperStream.close();
+    std::cout << "stream closed" << std::endl;
+    std::cout << "stream closed" << std::endl;
+    std::cout << "stream closed" << std::endl;
+    std::cout << "stream closed" << std::endl;
+    std::cout << "stream closed" << std::endl;
+    }
+    else {
+        // show message:
+        std::cout << "Error opening file";
+    }
 }
 
 void printData(void)
