@@ -1,23 +1,15 @@
 #include <iostream>
 #include <fstream>          //reading file with ADC values
 #include <queue>            //std::queue
-#include <iomanip>          //std::setprecision
-#include <chrono>           //std::chrono
-#include <date.h>           //for time format (UTC)
-#include <functional>       //std::function <-- thread/timer
-#include <thread>           //for multithreading
+#include <precision.h>      //for time precision
+#include <timer_Start.h>
 
 
 
 #define WAIT_PERIOD_FETCH 2000
 #define WAIT_PERIOD_SEND 2000
 
-template <class Precision>
-std::string getISOCurrentTimestamp()
-{
-    auto now = std::chrono::system_clock::now();
-    return date::format("%FT%TZ", date::floor<Precision>(now));
-}
+
 
 void readFile(void);
 void printData(void);
@@ -33,7 +25,7 @@ int main()
     timer_start(printData);
 
 
-    /*test loop for checking file reading*/
+    /*to keep threads alive*/
     while(true)
     {
 
@@ -72,12 +64,4 @@ void printData(void)
 }
 
 
-void timer_start(std::function<void(void)> func)
-{
-  std::thread([func](){
-    while (true)
-    {
-      func();
-    }
-  }).detach();
-}
+
