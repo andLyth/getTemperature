@@ -1,0 +1,37 @@
+# depslib dependency file v1.0
+1629138283 source:c:\users\medici\documents\github\gettemperature\gettemperature\main.cpp
+	<iostream>
+	<fstream>
+	<queue>
+	<iomanip>
+	<chrono>
+	<date.h>
+	<functional>
+	<thread>
+
+1629038372 c:\users\medici\documents\github\gettemperature\gettemperature\date.h
+	<cassert>
+	<algorithm>
+	<cctype>
+	<chrono>
+	<climits>
+	<cmath>
+	<cstddef>
+	<cstdint>
+	<cstdlib>
+	<ctime>
+	<ios>
+	<istream>
+	<iterator>
+	<limits>
+	<locale>
+	<memory>
+	<ostream>
+	<ratio>
+	<sstream>
+	<stdexcept>
+	<string>
+	<string_view>
+	<utility>
+	<type_traits>
+
