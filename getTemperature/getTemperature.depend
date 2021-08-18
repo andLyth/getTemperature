@@ -1,13 +1,11 @@
 # depslib dependency file v1.0
-1629138283 source:c:\users\medici\documents\github\gettemperature\gettemperature\main.cpp
+1629294734 source:c:\users\medici\documents\github\gettemperature\gettemperature\main.cpp
 	<iostream>
-	<fstream>
 	<queue>
-	<iomanip>
-	<chrono>
-	<date.h>
-	<functional>
-	<thread>
+	<precision.h>
+	<timer_Start.h>
+	<readADC.h>
+	<dataHandler.h>
 
 1629038372 c:\users\medici\documents\github\gettemperature\gettemperature\date.h
 	<cassert>
@@ -34,4 +32,19 @@
 	<string_view>
 	<utility>
 	<type_traits>
+
+1629288460 c:\users\medici\documents\github\gettemperature\gettemperature\precision.h
+	<date.h>
+	<iomanip>
+	<chrono>
+
+1629141494 c:\users\medici\documents\github\gettemperature\gettemperature\timer_start.h
+	<thread>
+	<functional>
+
+1629294988 c:\users\medici\documents\github\gettemperature\gettemperature\readadc.h
+	<fstream>
+
+1629293723 c:\users\medici\documents\github\gettemperature\gettemperature\datahandler.h
+	<windows.h>
 
