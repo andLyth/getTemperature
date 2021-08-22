@@ -6,10 +6,14 @@
 #include <windows.h>
 #include <deque>
 
+#define LOCAL_ADDRESS "http://localhost:5000/api/temperature";
+#define LOCAL_BACKUP_ADDRESS "http://localhost:5000/api/temperature/missing";
+
 #define WAIT_PERIOD_SEND 1000               /*wakeup period for periodic function call*/
 #define SLOPE 23.0/952.0d                   /*linear function for ADC (x) -> temp conversion: f(x) = (23/952)*x - 50 */
 #define INTERCEPT 50.0d                     /*linear function for ADC (x) -> temp conversion: f(x) = (23/952)*x - 50 */
 #define MAX_VALUE_BACKUP_ELEMENT_SIZE 10;   /*number of max values to be backed up for error handling (errorcode: 500)*/
+
 
 
 
@@ -91,16 +95,14 @@ void createOutputs(double* ptr_maxVal, double* ptr_minVal, double* ptr_average,
     o1.close();
 
     //backup ten last JSON objects into JSON backup file. . Will be overwritten each WAIT_PERIOD_SEND
-    if(backupDeque.size() > 9) backupDeque.pop_front();
+    if(backupDeque.size() >= MAX_VALUE_BACKUP_ELEMENT_SIZE) backupDeque.pop_front();
     backupDeque.push_back(j);
     for (std::deque<nlohmann::json>::iterator it = backupDeque.begin(); it!=backupDeque.end(); ++it)
     {
         std::cout << std::setprecision(2);
-        std::cout << backupDeque.front() << std::endl;
         o2 << std::setw(3) << j << std::endl;
     }
     o2.close();
-    std::cout <<std::endl;
 
     //test by printing
     //print(maxValuesBackup);
@@ -114,16 +116,14 @@ void createOutputs(double* ptr_maxVal, double* ptr_minVal, double* ptr_average,
 //Pseudo function for filesending to localhost.
 void sendFile(void)
 {
-    const std::string localAddress = "http://localhost:5000/api/temperature";
-    const std::string localBackupAddress = "http://localhost:5000/api/temperature/missing";
 
     //pseudo code
 
-    //send ."temeratureCalculations.json" or json object (j) to localaddress
+    //send ."temeratureCalculations.json" or json object (j) to LOCAL_ADDRESS
 
     //wait for reply (code)
 
-    //if code is 500, send "backup.json" to localBackupAddress
+    //if code is 500, send "backup.json" to LOCAL_BACKUP_ADDRESS
 }
 
 
