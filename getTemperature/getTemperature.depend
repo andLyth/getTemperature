@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1629294734 source:c:\users\medici\documents\github\gettemperature\gettemperature\main.cpp
+1629329506 source:c:\users\medici\documents\github\gettemperature\gettemperature\main.cpp
 	<iostream>
 	<queue>
 	<precision.h>
@@ -33,7 +33,7 @@
 	<utility>
 	<type_traits>
 
-1629288460 c:\users\medici\documents\github\gettemperature\gettemperature\precision.h
+1629327434 c:\users\medici\documents\github\gettemperature\gettemperature\precision.h
 	<date.h>
 	<iomanip>
 	<chrono>
@@ -42,9 +42,174 @@
 	<thread>
 	<functional>
 
-1629294988 c:\users\medici\documents\github\gettemperature\gettemperature\readadc.h
+1629333062 c:\users\medici\documents\github\gettemperature\gettemperature\readadc.h
 	<fstream>
 
-1629293723 c:\users\medici\documents\github\gettemperature\gettemperature\datahandler.h
+1629663765 c:\users\medici\documents\github\gettemperature\gettemperature\datahandler.h
+	<json.hpp>
 	<windows.h>
+	<deque>
+
+1629059471 c:\users\medici\documents\github\gettemperature\gettemperature\json.hpp
+	<algorithm>
+	<cstddef>
+	<functional>
+	<initializer_list>
+	<iosfwd>
+	<iterator>
+	<memory>
+	<numeric>
+	<string>
+	<utility>
+	<vector>
+	<utility>
+	<algorithm>
+	<array>
+	<forward_list>
+	<iterator>
+	<map>
+	<string>
+	<tuple>
+	<type_traits>
+	<unordered_map>
+	<utility>
+	<valarray>
+	<exception>
+	<stdexcept>
+	<string>
+	<cstddef>
+	<utility>
+	<stdint.h>
+	<stdint.h>
+	<cstdlib>
+	<cassert>
+	<cstddef>
+	<type_traits>
+	<limits>
+	<type_traits>
+	<utility>
+	<iterator>
+	<type_traits>
+	<cstdint>
+	<map>
+	<memory>
+	<string>
+	<vector>
+	<array>
+	<cstddef>
+	<cstdint>
+	<string>
+	<algorithm>
+	<iterator>
+	<string>
+	<tuple>
+	<type_traits>
+	<utility>
+	<valarray>
+	<vector>
+	<cstddef>
+	<iterator>
+	<string>
+	<tuple>
+	<cstdint>
+	<tuple>
+	<utility>
+	<cstddef>
+	<functional>
+	<algorithm>
+	<array>
+	<cmath>
+	<cstddef>
+	<cstdint>
+	<cstdio>
+	<cstring>
+	<iterator>
+	<limits>
+	<string>
+	<utility>
+	<array>
+	<cstddef>
+	<cstdio>
+	<cstring>
+	<istream>
+	<iterator>
+	<memory>
+	<numeric>
+	<string>
+	<type_traits>
+	<utility>
+	<cstddef>
+	<string>
+	<utility>
+	<vector>
+	<array>
+	<clocale>
+	<cstddef>
+	<cstdio>
+	<cstdlib>
+	<initializer_list>
+	<string>
+	<utility>
+	<vector>
+	<cstdint>
+	<utility>
+	<string>
+	<cmath>
+	<cstdint>
+	<functional>
+	<string>
+	<utility>
+	<vector>
+	<cstddef>
+	<limits>
+	<iterator>
+	<type_traits>
+	<cstddef>
+	<iterator>
+	<utility>
+	<algorithm>
+	<cctype>
+	<limits>
+	<numeric>
+	<string>
+	<utility>
+	<vector>
+	<initializer_list>
+	<utility>
+	<algorithm>
+	<array>
+	<cstdint>
+	<cstring>
+	<limits>
+	<string>
+	<cmath>
+	<algorithm>
+	<cstddef>
+	<ios>
+	<iterator>
+	<memory>
+	<ostream>
+	<string>
+	<vector>
+	<algorithm>
+	<array>
+	<clocale>
+	<cmath>
+	<cstddef>
+	<cstdint>
+	<cstdio>
+	<limits>
+	<string>
+	<type_traits>
+	<utility>
+	<array>
+	<cmath>
+	<cstdint>
+	<cstring>
+	<limits>
+	<type_traits>
+	<functional>
+	<memory>
+	<utility>
+	<vector>
 

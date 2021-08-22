@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1629588091 source:c:\users\medici\documents\github\gettemperature\restclienttest\main.cpp
+	<windows.h>
+	<string>
+	<stdio.h>
+

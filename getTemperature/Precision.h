@@ -1,13 +1,13 @@
 #ifndef PRECISION_H_INCLUDED
 #define PRECISION_H_INCLUDED
-
+#endif // PRECISION_H_INCLUDED
 #include <date.h>           //for time format (UTC)
 #include <iomanip>          //std::setprecision
 #include <chrono>           //std::chrono
 
 
 
-#endif // PRECISION_H_INCLUDED
+
 
 template <class Precision>
 std::string getISOCurrentTimestamp()

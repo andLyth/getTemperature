@@ -10,9 +10,11 @@ void readFile(void);
 void printData(void);
 void timer_start(std::function<void(void)> func);
 double convertToTemp(double adcValue);
+inline void createJSON(void);
+
 
 std::queue<double> temperQueue;
-std::string nowTime = getISOCurrentTimestamp<std::chrono::microseconds>();
+
 
 
 
@@ -31,6 +33,9 @@ int main()
 
     return 0;
 }
+
+
+
 
 
 
